@@ -22,7 +22,7 @@ public class AppController {
 		return "Welcome to Leraning Hubb";
 	}
 
-	@PostMapping("/register")
+	@PostMapping("/registers")
 	public String fun2(@RequestBody User user) {
 		Cryptography cryp = new Cryptography();
 		user.setPassword(cryp.encryptData(user.getPassword()));
