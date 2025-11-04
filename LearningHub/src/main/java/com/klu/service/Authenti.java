@@ -6,14 +6,14 @@ public class Authenti {
 	public int getRole() {
 		return role;
 	}
-	public void setRole(int role) {
-		this.role = role;
-	}
 	public boolean isAuth() {
 		return auth;
 	}
 	public void setAuth(boolean auth) {
 		this.auth = auth;
+	}
+	public void setRole(int role) {
+		this.role = role;
 	}
 	@Override
 	public String toString() {

@@ -3,12 +3,14 @@ package com.klu.service;
 public class PasswordSender {
 	String password;
 
-	public String getPassword() {
-		return password;
-	}
+	
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getPassword() {
+		return password;
 	}
 
 	@Override
