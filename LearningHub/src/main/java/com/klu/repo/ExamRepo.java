@@ -8,7 +8,7 @@ import com.klu.entity.Exam;
 
 public interface ExamRepo extends JpaRepository<Exam, Long>{
 	
-	List<Exam> findByCourseId(String courseId);
+	List<Exam> findByCourseId(String course);
 
 	
 }
