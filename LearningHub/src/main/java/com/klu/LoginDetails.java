@@ -1,7 +1,7 @@
 package com.klu;
 
 public class LoginDetails {
-	String username;
+	String user;
 	String password;
 	public String getUsername() {
 		return username;
