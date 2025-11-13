@@ -36,7 +36,7 @@ public class AppController {
 	
 	@PostMapping("/sendPassword")
 	public String sendPassword(@RequestBody PasswordSender p) {
-		return service.sendPassword(p.getUsername());
+		return service.sendPassword(p.getPassword());
 	}
 
 	
