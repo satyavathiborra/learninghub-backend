@@ -1,6 +1,7 @@
 package com.klu;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class AppController {
 	
 	@PostMapping("/sendPassword")
 	public String sendPassword(@RequestBody PasswordSender p) {
-		return service.sendPassword(p.getPassword());
+		return service.sendPassword(p.getUsername());
 	}
 
 	
