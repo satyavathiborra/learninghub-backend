@@ -14,6 +14,7 @@ public class CourseContent {
 	String courseId;
 	int module;
 	@Column(length = 15000)
+	@JsonProperty("content") 
 	String description;
 	String link;
 	public long getId() {
