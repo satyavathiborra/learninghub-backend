@@ -38,6 +38,24 @@ public class AppController {
 		return service.sendPassword(p.getPassword());
 	}
 
+	
+	@PostMapping("/forgot-password")
+	public ResponseEntity<String> forgotPassword(@RequestBody Map<String, String> body) {
+	    String username = body.get("username");
+
+	    if (username == null || username.trim().isEmpty()) {
+	        return ResponseEntity.badRequest().body("Username cannot be empty");
+	    }
+
+	    String result = service.sendPassword(username);
+
+	    if (result.startsWith("Error")) {
+	        return ResponseEntity.status(404).body(result);
+	    }
+
+	    return ResponseEntity.ok(result);
+	}
+
     // Insert questions
     @PostMapping("/questions")
     public String insertQuestions(@RequestBody List<Exam> questions) {
