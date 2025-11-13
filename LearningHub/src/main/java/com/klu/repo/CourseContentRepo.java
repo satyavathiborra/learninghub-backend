@@ -6,4 +6,6 @@ import com.klu.entity.CourseContent;
 
 public interface CourseContentRepo extends JpaRepository<CourseContent, Long>{
 	CourseContent findByCourseIdAndModule(String courseId,int module);
+	
+	List<CourseContent> findByCourseId(String courseId);
 }
