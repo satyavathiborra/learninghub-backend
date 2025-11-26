@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Courses {
 	@Id
-	@JsonProperty("courseid")
+	@JsonProperty("courseId")
 	String courseId;
 	String username;
 	String description;
@@ -19,7 +19,10 @@ public class Courses {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
 	int time;
+	
+	
 	public String getCourseId() {
 		return courseId;
 	}
